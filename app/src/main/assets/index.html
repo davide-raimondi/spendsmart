@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>SpendSmart: Spese in 1-tap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <header>
+            <h1>SpendSmart</h1>
+            <p>Spese in 1-tap</p>
+        </header>
+
+        <!-- Month Navigation -->
+        <div class="glass-panel month-nav">
+            <button id="prev-month" class="nav-btn" title="Mese precedente">‹</button>
+            <div class="month-display">
+                <span id="current-month-label">Ottobre 2026</span>
+            </div>
+            <button id="next-month" class="nav-btn" title="Mese successivo">›</button>
+        </div>
+        
+        <!-- Summary -->
+        <div class="glass-panel summary-section">
+            <div class="summary-grid">
+                <div class="summary-box summary-total">
+                    <h3>Totale Mese</h3>
+                    <h2 id="total-expenses">0.00 €</h2>
+                </div>
+                <div class="summary-box summary-paid">
+                    <h3>Pagate</h3>
+                    <h2 id="total-paid">0.00 €</h2>
+                </div>
+                <div class="summary-box summary-unpaid">
+                    <h3>Da Pagare</h3>
+                    <h2 id="total-unpaid">0.00 €</h2>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div id="payment-progress" class="progress-bar"></div>
+            </div>
+            <p class="progress-label"><span id="progress-pct">0</span>% completato</p>
+        </div>
+
+        <!-- Add Expense Form -->
+        <div class="glass-panel input-section">
+            <form id="expense-form">
+                <div class="input-group">
+                    <input type="text" id="expense-name" placeholder="Nome Spesa (es. Affitto)" required>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="number" id="expense-cost" placeholder="Costo (€)" step="0.01" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="expense-due-day" placeholder="Giorno Scadenza" min="1" max="31">
+                    </div>
+                </div>
+                
+                <!-- Recurring Toggle -->
+                <div class="recurring-section">
+                    <label class="toggle-label">
+                        <span class="toggle-text">Spesa Fissa / Ricorrente</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="is-recurring" class="toggle-input">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                    
+                    <div id="recurring-options" class="recurring-options hidden">
+                        <div class="recurring-mode-tabs">
+                            <button type="button" class="tab-btn active" data-mode="range">Periodo</button>
+                            <button type="button" class="tab-btn" data-mode="custom">Mesi Specifici</button>
+                        </div>
+                        
+                        <!-- Range Mode -->
+                        <div id="range-mode" class="recurring-mode">
+                            <div class="range-row">
+                                <div class="input-group">
+                                    <label>Da</label>
+                                    <input type="month" id="start-month">
+                                </div>
+                                <div class="input-group">
+                                    <label>A</label>
+                                    <input type="month" id="end-month">
+                                </div>
+                            </div>
+                            <label class="toggle-label compact">
+                                <span class="toggle-text">Senza scadenza</span>
+                                <div class="toggle-switch small">
+                                    <input type="checkbox" id="no-end-date" class="toggle-input">
+                                    <span class="toggle-slider"></span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <!-- Custom Months Mode -->
+                        <div id="custom-mode" class="recurring-mode hidden">
+                            <div class="months-grid" id="months-grid">
+                                <!-- Filled dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary" id="submit-btn">Aggiungi</button>
+            </form>
+        </div>
+
+        <!-- Expense List -->
+        <div class="glass-panel list-section">
+            <div class="list-header">
+                <h3>Le tue Spese</h3>
+                <div class="list-filters">
+                    <button class="filter-btn active" data-filter="all">Tutte</button>
+                    <button class="filter-btn" data-filter="unpaid">Da Pagare</button>
+                    <button class="filter-btn" data-filter="overdue">⚠️ Scadute</button>
+                    <button class="filter-btn" data-filter="paid">Pagate</button>
+                </div>
+            </div>
+            <ul id="expense-list">
+                <!-- Expenses will be dynamically added here -->
+            </ul>
+            <div id="empty-state" class="empty-state hidden">
+                <span class="empty-icon">📭</span>
+                <p>Nessuna spesa per questo mese</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+        <button id="toast-undo" class="toast-undo-btn">Annulla</button>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal-overlay hidden">
+        <div class="modal glass-panel">
+            <h3>Modifica Spesa</h3>
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+                <div class="input-group">
+                    <input type="text" id="edit-name" placeholder="Nome Spesa" required>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="number" id="edit-cost" placeholder="Costo (€)" step="0.01" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="edit-due-day" placeholder="Giorno Scadenza" min="1" max="31">
+                    </div>
+                </div>
+                
+                <div class="recurring-section">
+                    <label class="toggle-label">
+                        <span class="toggle-text">Spesa Fissa / Ricorrente</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="edit-is-recurring" class="toggle-input">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                    <div id="edit-recurring-options" class="recurring-options hidden">
+                        <div class="recurring-mode-tabs">
+                            <button type="button" class="tab-btn active" data-mode="range">Periodo</button>
+                            <button type="button" class="tab-btn" data-mode="custom">Mesi Specifici</button>
+                        </div>
+                        <div id="edit-range-mode" class="recurring-mode">
+                            <div class="range-row">
+                                <div class="input-group">
+                                    <label>Da</label>
+                                    <input type="month" id="edit-start-month">
+                                </div>
+                                <div class="input-group">
+                                    <label>A</label>
+                                    <input type="month" id="edit-end-month">
+                                </div>
+                            </div>
+                            <label class="toggle-label compact">
+                                <span class="toggle-text">Senza scadenza</span>
+                                <div class="toggle-switch small">
+                                    <input type="checkbox" id="edit-no-end-date" class="toggle-input">
+                                    <span class="toggle-slider"></span>
+                                </div>
+                            </label>
+                        </div>
+                        <div id="edit-custom-mode" class="recurring-mode hidden">
+                            <div class="months-grid" id="edit-months-grid"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" id="cancel-edit" class="btn-secondary">Annulla</button>
+                    <button type="submit" class="btn-primary">Salva</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
