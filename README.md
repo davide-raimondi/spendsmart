@@ -107,7 +107,7 @@ SpendSmart/
 Puoi testare l'interfaccia immediatamente aprendo il file web:
 1. Clona il repository:
    ```bash
-   git clone https://github.com/davide23567/SpendSmart.git
+   git clone https://github.com/davide23567/spendsmart.git
    ```
 2. Apri `app/src/main/assets/index.html` con qualsiasi browser (Chrome, Edge, Firefox, Safari).
 
@@ -133,7 +133,7 @@ Puoi testare l'interfaccia immediatamente aprendo il file web:
 
 **Davide Raimondi**
 - GitHub: [@davide23567](https://github.com/davide23567)
-- Repository: [https://github.com/davide23567/SpendSmart](https://github.com/davide23567/SpendSmart)
+- Repository: [https://github.com/davide23567/spendsmart](https://github.com/davide23567/spendsmart)
 
 ---
 
