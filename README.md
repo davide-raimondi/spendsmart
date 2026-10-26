@@ -30,29 +30,6 @@
 
 </div>
 
----
-
-## 📱 Anteprima Interfaccia
-
-> 💡 *Consiglio: sostituisci i percorsi qui sotto con gli screenshot reali della tua app (salvali in una cartella `screenshots/` o `assets/`).*
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><b>📊 Dashboard & Bilancio</b></td>
-      <td align="center"><b>🔁 Spese Ricorrenti</b></td>
-      <td align="center"><b>⚠️ Filtri & Scadenze</b></td>
-    </tr>
-    <tr>
-      <td><img src="app/src/main/assets/logo.png" width="220" alt="Dashboard Screenshot" /></td>
-      <td><img src="app/src/main/assets/logo.png" width="220" alt="Ricorrenti Screenshot" /></td>
-      <td><img src="app/src/main/assets/logo.png" width="220" alt="Filtri Screenshot" /></td>
-    </tr>
-  </table>
-</div>
-
----
-
 ## 🎯 Perché SpendSmart?
 
 A differenza delle app bancarie tradizionali o dei fogli di calcolo complessi, **SpendSmart** nasce con un solo obiettivo: **azzerare la frizione quotidiana**.
@@ -60,7 +37,7 @@ A differenza delle app bancarie tradizionali o dei fogli di calcolo complessi, *
 | Problema Comune ❌ | La Soluzione SpendSmart ✅ |
 | :--- | :--- |
 | App lente con login obbligatorio e pubblicità | **Avvio istantaneo**, nessun account richiesto |
-| Dati finanziari salvati su cloud di terze parti | **100% Offline-First**, tutto resta sul tuo telefono |
+| Dati finanziari salvati su cloud di terze parti | **100% Offline-First**, tutto resta sul dispositivo |
 | Dimenticanze su bollette bimestrali o annuali | **Motore di ricorrenza flessibile** per mesi specifici |
 | Troppi passaggi per registrare un pagamento | **1-Tap Action**: tocca la card per saldare la spesa |
 
@@ -78,7 +55,7 @@ A differenza delle app bancarie tradizionali o dei fogli di calcolo complessi, *
   * **Modalità Periodo:** Imposta una spesa *Da Mese* a *A Mese* (o a tempo indeterminato).
   * **Modalità Mesi Specifici:** Perfetta per scadenze non mensili (es. bollette bimestrali, assicurazione auto, tasse annuali).
 * 🔍 **Smart Filtering:** Filtra al volo le voci tra `Tutte`, `Da Pagare`, `⚠️ Scadute` (evidenziazione automatica oltre il giorno di scadenza) e `Pagate`.
-* ↩️ **Safe Delete con Undo:** Eliminato una spesa per sbaglio? La notifica Toast interattiva ti permette di annullare l'azione all'istante.
+* ↩️ **Safe Delete con Undo:** Notifica Toast interattiva con pulsante *"Annulla"* per ripristinare qualsiasi eliminazione involontaria.
 * 🔒 **Privacy Totale:** Nessun tracciamento, nessun database esterno. Persistenza locale ultra-rapida tramite `LocalStorage`.
 
 ---
