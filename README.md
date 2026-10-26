@@ -1,142 +1,112 @@
-# 💸 SpendSmart — Spese in 1-Tap
+<div align="center">
 
-<p align="center">
-  <img src="app/src/main/assets/logo.png" alt="SpendSmart Logo" width="120" style="border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" />
-</p>
+  <img src="app/src/main/assets/logo.png" alt="SpendSmart Logo" width="120" />
 
-<p align="center">
-  <strong>Monitora le spese quotidiane, gestisci il budget e tieni sotto controllo le scadenze mensili in un singolo tocco.</strong>
-</p>
+  # 💸 SpendSmart
+  ### **Le tue spese mensili, sotto controllo in 1-Tap.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-blue?style=flat-square" alt="Platform" />
-  <img src="https://img.shields.io/badge/Language-Kotlin%20%2F%20JavaScript-orange?style=flat-square" alt="Language" />
-  <img src="https://img.shields.io/badge/Privacy-100%25%20Offline-emerald?style=flat-square" alt="Privacy" />
-  <img src="https://img.shields.io/badge/UI-Glassmorphism%20Dark-indigo?style=flat-square" alt="UI" />
-</p>
+  <p align="center">
+    Un'applicazione Android ibrida, ultra-leggera e 100% offline progettata per eliminare la complessità della gestione finanziaria personale. Zero registrazioni, zero server esterni, massima velocità.
+  </p>
+
+  <!-- BADGES -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-3b82f6?style=for-the-badge&logo=android&logoColor=white" alt="Platform" />
+    <img src="https://img.shields.io/badge/Tech-Kotlin%20%2B%20ES6-f97316?style=for-the-badge&logo=kotlin&logoColor=white" alt="Language" />
+    <img src="https://img.shields.io/badge/Privacy-100%25%20Offline-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="Privacy" />
+    <img src="https://img.shields.io/badge/UI-Glassmorphism-6366f1?style=for-the-badge" alt="UI" />
+  </p>
+
+  <!-- QUICK LINKS -->
+  <h4>
+    <a href="https://github.com/davide23567/spendsmart/releases">📲 Scarica APK</a>
+    <span> · </span>
+    <a href="#-funzionalità-principali">✨ Funzionalità</a>
+    <span> · </span>
+    <a href="#-come-eseguire-il-progetto">🚀 Installazione</a>
+    <span> · </span>
+    <a href="https://github.com/davide23567/spendsmart/issues">🐛 Segnala un Bug</a>
+  </h4>
+
+</div>
 
 ---
 
-## 📖 Panoramica
+## 📱 Anteprima Interfaccia
 
-**SpendSmart** è un'applicazione Android ibrida, lightweight e moderna progettata per semplificare radicalmente la gestione finanziaria personale. A differenza delle complesse app bancarie tradizionali, SpendSmart elimina ogni frizione: non richiede registrazione, non invia dati all'esterno ed è ottimizzata per consentire l'inserimento e il controllo delle spese in **1-tap**.
+> 💡 *Consiglio: sostituisci i percorsi qui sotto con gli screenshot reali della tua app (salvali in una cartella `screenshots/` o `assets/`).*
 
-Combina la fluidità di una UI moderna in **Glassmorphism** (sviluppata con tecnologie web standard) con l'affidabilità di un wrapper nativo **Android (Kotlin)** edge-to-edge.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>📊 Dashboard & Bilancio</b></td>
+      <td align="center"><b>🔁 Spese Ricorrenti</b></td>
+      <td align="center"><b>⚠️ Filtri & Scadenze</b></td>
+    </tr>
+    <tr>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Dashboard Screenshot" /></td>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Ricorrenti Screenshot" /></td>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Filtri Screenshot" /></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🎯 Perché SpendSmart?
+
+A differenza delle app bancarie tradizionali o dei fogli di calcolo complessi, **SpendSmart** nasce con un solo obiettivo: **azzerare la frizione quotidiana**.
+
+| Problema Comune ❌ | La Soluzione SpendSmart ✅ |
+| :--- | :--- |
+| App lente con login obbligatorio e pubblicità | **Avvio istantaneo**, nessun account richiesto |
+| Dati finanziari salvati su cloud di terze parti | **100% Offline-First**, tutto resta sul tuo telefono |
+| Dimenticanze su bollette bimestrali o annuali | **Motore di ricorrenza flessibile** per mesi specifici |
+| Troppi passaggi per registrare un pagamento | **1-Tap Action**: tocca la card per saldare la spesa |
 
 ---
 
 ## ✨ Funzionalità Principali
 
-- ⚡ **1-Tap Action:** Segna una spesa come *Pagata* o *Da Pagare* con un solo tocco sul display.
-- 📅 **Navigazione Mensile Dinamica:** Scorri facilmente tra mesi passati, presenti e futuri con ricalcolo immediato dei totali.
-- 📊 **Dashboard Finanziaria & Progress Bar:** 
-  - **Totale Mese:** Somma complessiva delle uscite preventivate.
-  - **Pagate:** Ammontare già saldato.
-  - **Da Pagare:** Importo rimanente da saldare.
-  - **Barra di avanzamento interattiva:** Percentuale grafica di completamento del mese.
-- 🔁 **Spese Fisse e Ricorrenti Avanzate:**
-  - Configura spese continuative (es. *Affitto*, *Netflix*, *Palestra*).
-  - Modalità **Periodo** (*Da Mese* a *A Mese* o senza data di scadenza).
-  - Modalità **Mesi Specifici** (per spese bimestrali, trimestrali o annuali come bollette e assicurazioni).
-- 🔍 **Filtri Intelligenti:**
-  - `Tutte`: Panoramica completa del mese.
-  - `Da Pagare`: Focus sulle uscite ancora da saldare.
-  - `⚠️ Scadute`: Rilevamento immediato dei pagamenti oltre il giorno prefissato.
-  - `Pagate`: Archivio delle spese già regolate.
-- ↩️ **Undo / Annulla Istantaneo:** Notifica toast con pulsante *"Annulla"* per ripristinare qualsiasi eliminazione involontaria.
-- ✏️ **Modifica e Personalizzazione:** Modale intuitiva per correggere importi, giorni di scadenza o parametri di ricorrenza.
-- 🔒 **100% Privacy & Offline-First:** Tutti i dati risiedono esclusivamente nel dispositivo (`LocalStorage`). Nessun tracking, nessuna pubblicità, nessun server remoto.
+* ⚡ **1-Tap Status Toggle:** Segna qualsiasi spesa come *Pagata* o *Da Pagare* con un singolo tocco sulla scheda.
+* 📊 **Dashboard Finanziaria in Tempo Reale:**
+  * **Totale Mese:** Panoramica immediata delle uscite previste.
+  * **Pagate vs Da Pagare:** Bilancio aggiornato istantaneamente ad ogni tocco.
+  * **Progress Bar Dinamica:** Indicatore visivo della percentuale di completamento delle spese mensili.
+* 🔁 **Gestione Avanzata Spese Fisse e Ricorrenti:**
+  * Ideale per *Affitto, Abbonamenti (Netflix, Spotify, Palestra), Rate e Utenze*.
+  * **Modalità Periodo:** Imposta una spesa *Da Mese* a *A Mese* (o a tempo indeterminato).
+  * **Modalità Mesi Specifici:** Perfetta per scadenze non mensili (es. bollette bimestrali, assicurazione auto, tasse annuali).
+* 🔍 **Smart Filtering:** Filtra al volo le voci tra `Tutte`, `Da Pagare`, `⚠️ Scadute` (evidenziazione automatica oltre il giorno di scadenza) e `Pagate`.
+* ↩️ **Safe Delete con Undo:** Eliminato una spesa per sbaglio? La notifica Toast interattiva ti permette di annullare l'azione all'istante.
+* 🔒 **Privacy Totale:** Nessun tracciamento, nessun database esterno. Persistenza locale ultra-rapida tramite `LocalStorage`.
 
 ---
 
-## 🎨 Design & Esperienza Utente
+## 🎨 Design System & UX
 
-- **Tema Scuro Moderno:** Palette cromatica curata su toni ardesia/blu profondo (`#0f172a`) con accenti verde smeraldo e indaco.
-- **Effetto Glassmorphism:** Schede semitrasparenti con sfocatura dinamica dello sfondo (*backdrop-filter*).
-- **Sfondo Dinamico:** Gradient blobs animati per dare profondità e modernità all'interfaccia.
-- **Tipografia:** Google Font *Inter* per la massima leggibilità.
-- **Edge-to-Edge Nativo:** Perfetta integrazione con la barra di stato e la barra di navigazione di Android (`WindowCompat`).
+SpendSmart unisce la flessibilità del design web moderno con un'esperienza nativa Android immersiva:
 
----
-
-## 🛠️ Architettura e Stack Tecnologico
-
-### Frontend (Web Core)
-- **HTML5:** Struttura semantica, accessibility e navigazione touch.
-- **CSS3:** Custom Properties (variabili CSS), layout responsive Flexbox/Grid, animazioni e glassmorphism.
-- **JavaScript (Vanilla ES6+):** Logica di calcolo dei bilanci, gestione dello stato, persistenza dati e gestione eventi senza framework pesanti.
-
-### Applicazione Android
-- **Linguaggio:** Kotlin
-- **Architettura:** Single-Activity (`MainActivity.kt`) con `Android WebView` ad alte prestazioni.
-- **UI System:** AndroidX Core, `WindowCompat` per supporto immersivo a schermo intero.
-- **Build System:** Gradle (Kotlin DSL - `build.gradle.kts`) con Version Catalog (`gradle/libs.versions.toml`).
-- **Asset Branding:** Icone adattive mipmap generate su tutte le densità (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi).
+* **Dark Mode Nativa:** Palette calibrata su toni Slate/Deep Blue (`#0f172a`) con accenti semantici *Emerald* (pagato) e *Indigo* (focus).
+* **Glassmorphism UI:** Card traslucide con sfocatura dinamica (`backdrop-filter: blur`) su sfondo con gradient blobs animati.
+* **Edge-to-Edge Display:** Integrazione fluida con status bar e navigation bar di Android tramite `WindowCompat`.
+* **Tipografia Curata:** Font *Inter* per garantire leggibilità perfetta anche su cifre e badge compatti.
 
 ---
 
-## 📂 Struttura del Progetto
+## 🛠️ Stack Tecnologico & Architettura
+
+Il progetto adotta un'architettura **Hybrid Web-Native** leggera, evitando framework pesanti per garantire prestazioni immediate su qualsiasi smartphone.
 
 ```text
-SpendSmart/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── assets/              # Interfaccia Web Core
-│   │   │   │   ├── index.html       # Markup applicazione
-│   │   │   │   ├── styles.css       # Design System & Glassmorphism
-│   │   │   │   ├── script.js        # Logica di business & LocalStorage
-│   │   │   │   └── logo.png         # Logo ufficiale
-│   │   │   ├── java/                # Codice sorgente nativo Kotlin
-│   │   │   │   └── com/example/spendsmart/MainActivity.kt
-│   │   │   └── res/                 # Icone vettoriali e mipmap adattive
-│   │   └── AndroidManifest.xml
-│   └── build.gradle.kts
-├── gradle/
-│   └── libs.versions.toml           # Gestione dipendenze centralizzata
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
-```
-
----
-
-## 🚀 Come Eseguire il Progetto
-
-### 1. Test Rapido nel Browser (Nessuna installazione richiesta)
-Puoi testare l'interfaccia immediatamente aprendo il file web:
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/davide23567/spendsmart.git
-   ```
-2. Apri `app/src/main/assets/index.html` con qualsiasi browser (Chrome, Edge, Firefox, Safari).
-
-### 2. Esecuzione su Dispositivo o Emulatore Android
-1. Apri **Android Studio**.
-2. Seleziona **Open** e scegli la cartella principale del progetto `SpendSmart`.
-3. Attendi il completamento della sincronizzazione di Gradle.
-4. Collega uno smartphone Android (con debug USB abilitato) o avvia un emulatore AVD.
-5. Clicca su **Run** (o premi `Shift + F10`).
-
-### 3. Generazione APK da Riga di Comando
-```powershell
-# Su Windows:
-.\gradlew.bat assembleDebug
-
-# L'APK generato sarà disponibile in:
-# app/build/outputs/apk/debug/app-debug.apk
-```
-
----
-
-## 👤 Autore
-
-**Davide Raimondi**
-- GitHub: [@davide23567](https://github.com/davide23567)
-- Repository: [https://github.com/davide23567/spendsmart](https://github.com/davide23567/spendsmart)
-
----
-
-## 📄 Licenza
-
-Questo progetto è rilasciato sotto licenza [MIT](LICENSE).
+spendsmart/
+├── app/src/main/
+│   ├── assets/                  # 🌐 WEB CORE (UI & Business Logic)
+│   │   ├── index.html           # Struttura semantica & Modali
+│   │   ├── styles.css           # Design System, Variabili CSS & Glassmorphism
+│   │   ├── script.js            # State Management, Calcoli & LocalStorage
+│   │   └── logo.png             # Brand Identity
+│   ├── java/.../MainActivity.kt # 📱 ANDROID WRAPPER (Kotlin Edge-to-Edge WebView)
+│   └── res/                     # Icone adattive mipmap (mdpi -> xxxhdpi)
+├── gradle/libs.versions.toml    # Gestione centralizzata dipendenze (Version Catalog)
+└── build.gradle.kts             # Build configuration in Kotlin DSL
