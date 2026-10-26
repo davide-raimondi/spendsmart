@@ -19,7 +19,7 @@
 
   <!-- QUICK LINKS -->
   <h4>
-    <a href="https://github.com/davide23567/spendsmart/releases">📲 Scarica APK</a>
+    <a href="#-richiedi-lapk">📲 Richiedi APK</a>
     <span> · </span>
     <a href="#-funzionalità-principali">✨ Funzionalità</a>
     <span> · </span>
@@ -29,6 +29,27 @@
   </h4>
 
 </div>
+
+---
+
+## 📱 Anteprima Interfaccia
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>📊 Dashboard & Bilancio</b></td>
+      <td align="center"><b>🔁 Spese Ricorrenti</b></td>
+      <td align="center"><b>⚠️ Filtri & Scadenze</b></td>
+    </tr>
+    <tr>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Dashboard Screenshot" /></td>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Ricorrenti Screenshot" /></td>
+      <td><img src="app/src/main/assets/logo.png" width="220" alt="Filtri Screenshot" /></td>
+    </tr>
+  </table>
+</div>
+
+---
 
 ## 🎯 Perché SpendSmart?
 
