@@ -16,14 +16,20 @@
     
     <div class="app-container">
         <header>
-            <h1>SpendSmart</h1>
-            <p>Spese in 1-tap</p>
+            <div class="header-brand">
+                <img src="logo.png" alt="SpendSmart Logo" class="brand-logo">
+                <div class="brand-text">
+                    <h1>SpendSmart</h1>
+                    <p class="brand-badge"><span class="pulse-dot"></span>Spese in 1-tap</p>
+                </div>
+            </div>
         </header>
 
         <!-- Month Navigation -->
         <div class="glass-panel month-nav">
             <button id="prev-month" class="nav-btn" title="Mese precedente">‹</button>
             <div class="month-display">
+                <span class="month-icon">📅</span>
                 <span id="current-month-label">Ottobre 2026</span>
             </div>
             <button id="next-month" class="nav-btn" title="Mese successivo">›</button>
@@ -33,15 +39,24 @@
         <div class="glass-panel summary-section">
             <div class="summary-grid">
                 <div class="summary-box summary-total">
-                    <h3>Totale Mese</h3>
+                    <div class="summary-box-header">
+                        <span class="summary-box-icon">💳</span>
+                        <h3>Totale Mese</h3>
+                    </div>
                     <h2 id="total-expenses">0.00 €</h2>
                 </div>
                 <div class="summary-box summary-paid">
-                    <h3>Pagate</h3>
+                    <div class="summary-box-header">
+                        <span class="summary-box-icon">✨</span>
+                        <h3>Pagate</h3>
+                    </div>
                     <h2 id="total-paid">0.00 €</h2>
                 </div>
                 <div class="summary-box summary-unpaid">
-                    <h3>Da Pagare</h3>
+                    <div class="summary-box-header">
+                        <span class="summary-box-icon">⏳</span>
+                        <h3>Da Pagare</h3>
+                    </div>
                     <h2 id="total-unpaid">0.00 €</h2>
                 </div>
             </div>
@@ -112,7 +127,7 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="btn-primary" id="submit-btn">Aggiungi</button>
+                <button type="submit" class="btn-primary" id="submit-btn">+ Aggiungi Spesa</button>
             </form>
         </div>
 
