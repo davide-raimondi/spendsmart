@@ -16,7 +16,13 @@ class MainActivity : ComponentActivity() {
 
         // Edge-to-edge with proper status bar handling
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = android.graphics.Color.parseColor("#0f172a")
+        window.statusBarColor = android.graphics.Color.parseColor("#f3f7fc")
+        window.navigationBarColor = android.graphics.Color.parseColor("#f3f7fc")
+        // Icone scure su barre di sistema chiare
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true
+            isAppearanceLightNavigationBars = true
+        }
 
         webView = WebView(this)
         webView.webViewClient = WebViewClient()

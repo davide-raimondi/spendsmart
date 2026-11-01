@@ -21,7 +21,7 @@
   <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-blue?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/Language-Kotlin%20%2F%20JavaScript-orange?style=flat-square" alt="Language" />
   <img src="https://img.shields.io/badge/Privacy-100%25%20Offline-emerald?style=flat-square" alt="Privacy" />
-  <img src="https://img.shields.io/badge/UI-Dark%20Obsidian%20Glass-indigo?style=flat-square" alt="UI" />
+  <img src="https://img.shields.io/badge/UI-Light%20Sky%20Glass-0284c7?style=flat-square" alt="UI" />
 </p>
 
 ---
@@ -72,9 +72,9 @@ Combina la fluidità di una UI moderna in **Glassmorphism ad alta definizione** 
 
 ## 🎨 Grafica Rinnovata & Design System
 
-- **Tema Scuro Obsidian:** Palette cromatica curata su toni ardesia/notte profonda (`#0b0f19`) con accenti ciano elettrico (`#38bdf8`), verde smeraldo (`#10b981`) e indaco (`#818cf8`).
-- **Glassmorphism Premium:** Schede semitrasparenti con sfocatura dinamica dello sfondo (`backdrop-filter: blur(20px) saturate(180%)`), bordi luminosi e riflessi interni.
-- **Mesh Ambientale Dinamico:** Sfumature fluorescenti animate sullo sfondo che donano profondità e un feeling moderno da app fintech.
+- **Tema Chiaro Sky:** Palette fresca e luminosa pensata per un'app finanziaria: sfondo azzurro ghiaccio (`#f3f7fc`), schede bianche, accenti blu cielo (`#0284c7` / `#2563eb`) e colori semantici ad alto contrasto — verde smeraldo (`#059669`) per le spese pagate, ambra (`#d97706`) per quelle in scadenza e rosa/rosso (`#e11d48`) per le scadute.
+- **Glassmorphism Leggero:** Schede semitrasparenti bianche con sfocatura dinamica dello sfondo (`backdrop-filter: blur(20px)`), bordi sottili e ombre morbide azzurrate.
+- **Mesh Ambientale Dinamico:** Sfumature pastello animate sullo sfondo che donano profondità e un feeling moderno da app fintech.
 - **Tipografia di Precisione:** Google Font *Inter* con cifre tabulari per l'allineamento perfetto dei bilanci finanziari.
 - **Feedback & Micro-Animazioni:** Transizioni fluide su pulsanti, swipe, switch in stile iOS e stati di pagamento.
 - **Edge-to-Edge Nativo:** Perfetta integrazione immersiva con la barra di stato e la barra di navigazione di Android (`WindowCompat`).
